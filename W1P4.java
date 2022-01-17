@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Program4 {
+public class W1P4 {
     public static void main(String[] args) {
         // Teerawat Chanvipardilok 64011154
         

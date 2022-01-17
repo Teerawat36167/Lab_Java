@@ -1,4 +1,4 @@
-public class Program1 {
+public class W1P1 {
     public static void main(String[] args) {
         // Teerawat Chanvipardilok 64011154
         
