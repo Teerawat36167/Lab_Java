@@ -6,14 +6,20 @@ public class StopWatch {
         startTime = System.nanoTime();
     }
 
-    public long start() {
-        startTime = System.nanoTime();
+    public long getStartTime() {
         return startTime;
     }
 
-    public long stop() {
-        endTime = System.nanoTime();
+    public long getEndTime() {
         return endTime;
+    }
+
+    public void start() {
+        startTime = System.nanoTime();
+    }
+
+    public void stop() {
+        endTime = System.nanoTime();
     }
 
     public double getElapsedTime() {
