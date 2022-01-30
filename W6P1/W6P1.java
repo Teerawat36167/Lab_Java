@@ -3,14 +3,21 @@ import java.util.Scanner;
 public class W6P1 {
     public static void main(String[] args) {
 
-        String name;
-        int age;
-        double weight,feet,inches;
-
         Scanner info = new Scanner(System.in);
         
         System.out.print("Enter your name : ");
-        name = info.nextLine();
-        BMI p1 = new BMI(name, age, weight, feet, inches);
+        String name = info.nextLine();
+        System.out.print("Enter your age : ");
+        int age = info.nextInt();
+        System.out.print("Enter your weight (pound) : ");
+        double weight = info.nextDouble();
+        System.out.print("Enter your height (inches) : ");
+        double height = info.nextDouble();
+
+        info.close();
+
+        BMI p1 = new BMI(name, age, weight, 0, height);
+        System.out.println("BMI = "+p1.ValueBMI());
+        System.out.println("Interpretation = "+p1.Interpretation());
     }
 }
