@@ -14,6 +14,22 @@ public class BMI {
         this.height = inches;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public double weight() {
+        return weight;
+    }
+
+    public double height() {
+        return height;
+    }
+
     public double ValueBMI() {
         double bmi = (weight * POUND) / ((height * INCH) * (height * INCH));
         return bmi;
