@@ -1,6 +1,6 @@
 public class ComputeTax {
 
-    private double[] rates = {0.10, 0.15, 0.25, 0.28, 0.33, 0.36};
+    private double[] rates = {0.10, 0.15, 0.25, 0.28, 0.33, 0.35};
     private int[][] brackets = {
         {8350, 33950, 82250, 171550, 372950},
         {16700, 67900, 137050, 208850, 372950},
@@ -8,15 +8,7 @@ public class ComputeTax {
         {11950, 45500, 117450, 190200, 372950}
     };
 
-    public ComputeTax() {
-        System.out.println("Filing Status");
-        System.out.println("    [0]-Single filer");
-        System.out.println("    [1]-Married jointly or qualifying widow(er)");
-        System.out.println("    [2]-Married separately");
-        System.out.println("    [3]-Head of household");
-    }
-
-    public double tax(int i, int income) {
+    public double tax(int i, Double income) {
         double tax = 0;
         if (income <= brackets[i][0]) {
             tax = income * rates[0];
