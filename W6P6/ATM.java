@@ -51,7 +51,7 @@ public class ATM {
         else if (option == 4) {
             exit();
         }
-    }
+    }    
 
     public void getBalance() {
         System.out.println("The balance is "+this.balance[user]);
