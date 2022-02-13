@@ -46,14 +46,6 @@ public class Accounts {
         this.annualInterestRate = newAnnualInterestRate;
     }
 
-    public double getMonthlyInterestRate() {
-        return (this.annualInterestRate/12)/100;
-    }
-
-    public double getMonthlyInterest() {
-        return this.balance*getMonthlyInterestRate();
-    }
-
     public void withdraw(double amount) {
         this.balance -= amount;
         System.out.println("Withdraw : "  + amount);
