@@ -25,6 +25,6 @@ public class W6P5 {
         ic.close();
 
         Tax t1 = new Tax(filingStatus, brackets , rates , taxableIncome);
-        System.out.println("Tax is "+t1.getTax());
+        System.out.println("Tax is "+t1.getTax());    
     }
 }

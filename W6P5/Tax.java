@@ -24,8 +24,8 @@ public class Tax {
         return this.filingStatus;
     }
 
-    public void setFilingStatus(int fillingStatus) {
-        this.filingStatus = fillingStatus;
+    public void setFilingStatus(int filingStatus) {
+        this.filingStatus = filingStatus;
     }
 
     public double getTaxable() {
@@ -44,7 +44,7 @@ public class Tax {
         this.brackets[i][j] = brackets;
     }
 
-    public double[] rates() {
+    public double[] getRates() {
         return this.rates;
     }
 

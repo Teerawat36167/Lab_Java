@@ -27,9 +27,4 @@ public class checking extends Accounts{
             System.out.println("Withdraw error : Account limit exceeded");
         }
     }
-
-    public String toString() {
-        return  "Balance is " + balance + "\n" +
-                "This account was created at " + dateCreated;
-    }
 }

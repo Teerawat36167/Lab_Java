@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class ATM {
-    public int[] id = {0,1,2,3,4,5,6,7,8,9};
-    public double[] balance = {100,100,100,100,100,100,100,100,100,100};
-    public int user ;
+    private int[] id = {0,1,2,3,4,5,6,7,8,9};
+    private double[] balance = {100,100,100,100,100,100,100,100,100,100};
+    private int user ;
     private Scanner ac = new Scanner(System.in);
 
     public void login() {
