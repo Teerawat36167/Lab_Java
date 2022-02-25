@@ -1,68 +1,65 @@
 import java.lang.Math;
 
-public class Triangle {
-    private int n = 3;
-    private double side = 1;
-    private double x = 0;
-    private double y = 0;
-
-    // Constructor
-
+public class Triangle extends GeometricObject{
+    private double s1,s2,s3;
+    
     public Triangle() {
-
+        super();
     }
 
-    public Triangle(int n,double side) {
-        this.n = n;
-        this.side = side;
+    public Triangle(double s1,double s2,double s3) {
+        super();
+        this.s1 = s1;
+        this.s2 = s2;
+        this.s3 = s3;
     }
 
-    public Triangle(int n,double side,double x,double y) {
-        this.n = n;
-        this.side = side;
-        this.x = x;
-        this.y = y;
+    public Triangle(double s1,double s2,double s3,String color,Boolean filled) {
+        super(color, filled);
+        this.s1 = s1;
+        this.s2 = s2;
+        this.s3 = s3;
     }
 
-    // Method
-
-    public int accessorN() {
-        return this.n;
+    public double getS1() {
+        return this.s1;
     }
 
-    public double accessorSide() {
-        return this.side;
+    public void setS1(double s1) {
+        this.s1 = s1;
     }
 
-    public double accessorX() {
-        return x;
+    public double getS2() {
+        return this.s2;
     }
 
-    public double accessorY() {
-        return y;
+    public void setS2(double s2) {
+        this.s2 = s2;
     }
 
-    public void mutatorN(int n) {
-        this.n = n;
+    public double getS3() {
+        return this.s3;
     }
 
-    public void mutatorSide(double side) {
-        this.side = side;
+    public void setS3(double s3) {
+        this.s3 = s3;
     }
 
-    public void mutatorX(double x) {
-        this.x = x;
-    }
-
-    public void mutatorY(double y) {
-        this.y = y;
-    }
-
-    public double getPerimeter() {
-        return n*side;
-    }
-
+    @Override
     public double getArea() {
-        return (n*(side*side))/(4*Math.tan(Math.PI/n));
+        double s = (s1 + s2 + s3) / 2;
+        return Math.sqrt((s*(s-s1)) * (s-s2) * (s-s3));
+    }
+
+    @Override
+    public double getPerimeter() {
+        return s1 + s2 + s3;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n" +
+                "Perimeter = " + getPerimeter() + "\n" +
+                "Area = " + getArea();
     }
 }

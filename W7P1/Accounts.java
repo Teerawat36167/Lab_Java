@@ -1,17 +1,16 @@
 import java.util.*;
 
 public class Accounts {
-    protected int id = 0;
-    protected double balance = 0;
-    protected double annualInterestRate = 0;
-    protected Date dateCreated;
+    private int id = 0;
+    private double balance = 0;
+    private double annualInterestRate = 0;
+    private Date dateCreated;
 
     public Accounts() {
         dateCreated = new Date();
     }
 
     public Accounts(int id,double balance) {
-        System.out.println("Account");
         System.out.println("Balance is " + balance);
         this.id = id;
         this.balance = balance;

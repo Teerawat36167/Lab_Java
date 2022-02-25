@@ -54,5 +54,4 @@ public class Transactions {
     public void setDescription(String description) {
         this.description = description;
     }
-
 }

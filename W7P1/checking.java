@@ -1,26 +1,21 @@
-import java.util.*;
-
 public class checking extends Accounts{
 
     private double overdraftLimit ;
 
     public checking() {
-        dateCreated = new Date();
+        super();
     }
 
     public checking(int id,double balance,double overdraftLimit) {
-        System.out.println("Checking Account");
-        System.out.println("Overdraft Limit: " + overdraftLimit);
-        System.out.println("Balance is " + balance);
-        this.id = id;
-        this.balance = balance;
+        super(id, balance);
         this.overdraftLimit = overdraftLimit;
-        dateCreated = new Date();
+        System.out.println("OverdraftLimit : " + overdraftLimit);
     }
 
+    @Override
     public void withdraw(double amount) {
-        if (amount <= balance+overdraftLimit) {
-            this.balance -= amount;
+        if (amount <= super.accessorBalance()+overdraftLimit) {
+            super.mutatorBalance(super.accessorBalance()-amount);
             System.out.println("Withdraw : "  + amount);
         }
         else {

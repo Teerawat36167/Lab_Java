@@ -17,6 +17,10 @@ public class Lab7Account {
         this.name = name;
     }
 
+    public String accessorName() {
+        return this.name;
+    }
+
     public int accessorId() {
         return this.id;
     }
@@ -27,6 +31,10 @@ public class Lab7Account {
 
     public double accessorAnnualInterestRate() {
         return this.annualInterestRate;
+    }
+
+    public void mutatorName (String name) {
+        this.name = name;
     }
 
     public void mutatorId (int newId) {

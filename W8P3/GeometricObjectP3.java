@@ -1,15 +1,15 @@
 import java.util.Date;
 
-public abstract class GeometricObject {
+public abstract class GeometricObjectP3 {
     private String color;
     private boolean filled;
     private Date dateCreated;
 
-    protected GeometricObject() {
+    protected GeometricObjectP3() {
         dateCreated = new Date();
     }
 
-    protected GeometricObject(String color,Boolean filled) {
+    protected GeometricObjectP3(String color,Boolean filled) {
         this.color = color;
         this.filled = filled;
         dateCreated = new Date();

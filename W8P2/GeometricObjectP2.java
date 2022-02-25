@@ -1,15 +1,15 @@
 import java.util.Date;
 
-public abstract class GeometricObject {
+public abstract class GeometricObjectP2 {
     private String color;
     private boolean filled;
     private Date dateCreated;
 
-    protected GeometricObject() {
+    protected GeometricObjectP2() {
         dateCreated = new Date();
     }
 
-    protected GeometricObject(String color,Boolean filled) {
+    protected GeometricObjectP2(String color,Boolean filled) {
         this.color = color;
         this.filled = filled;
         dateCreated = new Date();
@@ -48,4 +48,5 @@ public abstract class GeometricObject {
     public abstract double getArea();
 
     public abstract double getPerimeter();
+
 }

@@ -28,7 +28,7 @@ public class Student extends Person{
         }
         return "STUDENT";
     }
-
+    @Override
     public String toString() {
         return super.toString() + "Student{status=" + status() + "}" ;
     }

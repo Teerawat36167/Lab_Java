@@ -10,6 +10,7 @@ public class Employee extends Person{
         this.office = office;
         this.salary = salary;
         dateHired = new Date();
+        System.out.println("Employee");
     }
 
     public String getOffice() {
@@ -32,10 +33,7 @@ public class Employee extends Person{
         return this.dateHired;
     }
 
-    public void setDateHired(Date dateHired) {
-        this.dateHired = dateHired;
-    }
-
+    @Override
     public String toString() {
         return super.toString() + "Employee{Office=" + office + " Salary=" + salary + " DateHired=" + dateHired + "}";
     }
@@ -49,6 +47,7 @@ class Faculty extends Employee{
         super(name, address, phoneNumber, emailAddress, office, salary);
         this.officeHours = officeHours;
         this.rank = rank;
+        System.out.println("Faculty");
     }
 
     public double getOfficeHours() {
@@ -67,6 +66,7 @@ class Faculty extends Employee{
         this.rank = rank;
     }
 
+    @Override
     public String toString() {
         return super.toString() + "Employee{OfficeHours=" + officeHours + " Rank=" + rank + "}" ;
     }
@@ -78,6 +78,7 @@ class Staff extends Employee {
     public Staff(String name,String address,String phoneNumber,String emailAddress,String office,double salary,String title) {
         super(name, address, phoneNumber, emailAddress, office, salary);
         this.title = title;
+        System.out.println("Staff");
     }
 
     public String getTitle() {
@@ -88,6 +89,7 @@ class Staff extends Employee {
         this.title = title;
     }
 
+    @Override
     public String toString() {
         return super.toString() + " Staff{title=" + title + "}";
     }
