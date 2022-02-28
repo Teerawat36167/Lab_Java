@@ -53,7 +53,7 @@ public class Rectangle extends GeometricObjectP3 implements Comparable<Rectangle
             return -1;
         }
         return 0;
-    }
+    }    
 
     @Override
     public boolean equals(Object obj) {

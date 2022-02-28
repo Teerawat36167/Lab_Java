@@ -1,25 +1,6 @@
 {
-    "java.project.sourcePaths": [
-        "W4P3",
-        "W4P2",
-        "W4P1",
-        "W5P1",
-        "W5P2",
-        "W6P1",
-        "W6P2",
-        "W6P3",
-        "W6P4",
-        "W6P5",
-        "W6P6",
-        "W7P1",
-        "W7P2",
-        "W7P3",
-        "W8P1",
-        "W8P2",
-        "W8P3",
-        "W8P4",
-        ""
-    ],
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "d:\\javafx-sdk-17.0.2\\lib\\javafx.base.jar",

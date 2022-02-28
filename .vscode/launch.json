@@ -1,0 +1,238 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "W9P1.src.App",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "TestFx.src.App",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W1P1",
+            "request": "launch",
+            "mainClass": "W1P1",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W1P2",
+            "request": "launch",
+            "mainClass": "W1P2",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W1P3",
+            "request": "launch",
+            "mainClass": "W1P3",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W1P4",
+            "request": "launch",
+            "mainClass": "W1P4",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W2P1",
+            "request": "launch",
+            "mainClass": "W2P1",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W2P2",
+            "request": "launch",
+            "mainClass": "W2P2",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W2P3",
+            "request": "launch",
+            "mainClass": "W2P3",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W2P4",
+            "request": "launch",
+            "mainClass": "W2P4",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W2P5",
+            "request": "launch",
+            "mainClass": "W2P5",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W3P1",
+            "request": "launch",
+            "mainClass": "W3P1",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W3P2",
+            "request": "launch",
+            "mainClass": "W3P2",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W3P3",
+            "request": "launch",
+            "mainClass": "W3P3",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W4P1",
+            "request": "launch",
+            "mainClass": "W4P1",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W4P2",
+            "request": "launch",
+            "mainClass": "W4P2",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W4P3",
+            "request": "launch",
+            "mainClass": "W4P3",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W5P1",
+            "request": "launch",
+            "mainClass": "W5P1",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W5P2",
+            "request": "launch",
+            "mainClass": "W5P2",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W6P1",
+            "request": "launch",
+            "mainClass": "W6P1",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W6P2",
+            "request": "launch",
+            "mainClass": "W6P2",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W6P3",
+            "request": "launch",
+            "mainClass": "W6P3",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W6P4",
+            "request": "launch",
+            "mainClass": "W6P4",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W6P5",
+            "request": "launch",
+            "mainClass": "W6P5",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W6P6",
+            "request": "launch",
+            "mainClass": "W6P6",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W7P1",
+            "request": "launch",
+            "mainClass": "W7P1",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W7P2",
+            "request": "launch",
+            "mainClass": "W7P2",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W7P3",
+            "request": "launch",
+            "mainClass": "W7P3",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W8P1",
+            "request": "launch",
+            "mainClass": "W8P1",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W8P2",
+            "request": "launch",
+            "mainClass": "W8P2",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W8P3",
+            "request": "launch",
+            "mainClass": "W8P3",
+            "projectName": "Lab_Java_aca2074d"
+        },
+        {
+            "type": "java",
+            "name": "Launch W8P4",
+            "request": "launch",
+            "mainClass": "W8P4",
+            "projectName": "Lab_Java_aca2074d"
+        }
+    ]
+}

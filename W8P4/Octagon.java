@@ -1,3 +1,5 @@
+import java.lang.Math;
+
 public class Octagon extends GeometricObjectP4 implements Comparable<Octagon>,Cloneable{
     private double side;
 
@@ -41,7 +43,7 @@ public class Octagon extends GeometricObjectP4 implements Comparable<Octagon>,Cl
 
     @Override
     public double getArea() {
-        return (2 + 4/22) * side * side;
+        return (2 + 4/Math.sqrt(2)) * side * side;
     }
 
     @Override
