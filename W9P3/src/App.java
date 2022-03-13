@@ -1,29 +1,31 @@
-import javafx.application.*;
-import javafx.event.*;
-import javafx.scene.*;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
-import javafx.stage.*;
+import javafx.application.Application;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
+import javafx.scene.shape.Circle;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class App extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent arg0) {
-                System.out.println("Hello World");
-            }
-        });
+        CustomClockPane clock = new CustomClockPane(((int) (Math.random() * 12)),(int) (Math.random() * 30), 0);
+        clock.setSecondHandVisible(false);
+        String time = clock.getHour() + ":" + clock.getMinute() + ":" + clock.getSecond();
+        Label currentTimeLabel = new Label(time);
 
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-
-        Scene scene = new Scene(root, 300, 250);
-
-        primaryStage.setTitle("Hello World");
+        BorderPane pane = new BorderPane();
+        pane.setCenter(clock);
+        pane.setBottom(currentTimeLabel);
+        BorderPane.setAlignment(currentTimeLabel, Pos.TOP_CENTER);
+        
+        Scene scene = new Scene(pane, 250, 250);
+        primaryStage.setTitle("Week 9 Program 3");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
