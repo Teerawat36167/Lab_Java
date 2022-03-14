@@ -1,31 +1,38 @@
-import javafx.application.*;
-import javafx.event.*;
-import javafx.scene.*;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
-import javafx.stage.*;
+import javafx.geometry.Pos;
+import javafx.stage.Stage;
 
 public class App extends Application{
-
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent arg0) {
-                System.out.println("Hello World");
-            }
-        });
+        Fan fan = new Fan();
 
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
+        Button Pause = new Button("Pause");
+		Button Resume = new Button("Resume");
+		Button Reverse = new Button("Reverse");
+		HBox hBox = new HBox(5);
+		hBox.setAlignment(Pos.CENTER);
+        hBox.getChildren().addAll(Pause, Resume, Reverse);
 
-        Scene scene = new Scene(root, 300, 250);
+        BorderPane borderPane = new BorderPane();
+		borderPane.setCenter(fan);
+		borderPane.setBottom(hBox);
 
-        primaryStage.setTitle("Hello World");
+        Pause.setOnAction(e -> fan.pause());
+        Resume.setOnAction(e -> fan.play());
+        Reverse.setOnAction(e -> fan.reverse());
+        
+        Scene scene = new Scene(borderPane, 250, 250);
+
+        primaryStage.setTitle("Week 9 Program 5");
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        fan.requestFocus();
     }
     
     public static void main(String[] args) {

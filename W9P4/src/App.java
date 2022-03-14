@@ -1,31 +1,32 @@
-import javafx.application.*;
-import javafx.event.*;
-import javafx.scene.*;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
-import javafx.stage.*;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
+import javafx.stage.Stage;
 
 public class App extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent arg0) {
-                System.out.println("Hello World");
-            }
-        });
+        Carpane pane = new Carpane();
 
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
+        pane.setOnMousePressed(e -> pane.pause());
+		pane.setOnMouseReleased(e -> pane.play());
 
-        Scene scene = new Scene(root, 300, 250);
-
-        primaryStage.setTitle("Hello World");
+        pane.setOnKeyPressed(e -> {
+			if (e.getCode() == KeyCode.D) {
+				pane.increaseSpeed();
+			}
+			else if (e.getCode() == KeyCode.A) {
+				pane.decreaseSpeed();
+			}
+		});
+        
+        Scene scene = new Scene(pane, 300, 200);
+        primaryStage.setTitle("Week 9 Program 4");
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        pane.requestFocus();
     }
     
     public static void main(String[] args) {
