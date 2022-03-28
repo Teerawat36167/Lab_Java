@@ -39,11 +39,15 @@ public class Carpane extends Pane{
 
      public void increaseSpeed() {
 		animation.setRate(animation.getRate() + 1);
+          animation.play();
           System.out.println(animation.getRate());
 	}
 
      public void decreaseSpeed() {
 		animation.setRate(animation.getRate() > 0 ? animation.getRate() - 1 : animation.getRate());
+          if (animation.getRate()==0){
+               animation.stop();
+          }
           System.out.println(animation.getRate());
 	}
 

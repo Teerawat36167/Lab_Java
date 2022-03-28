@@ -11,7 +11,7 @@ import javafx.animation.KeyFrame;
 import javafx.util.Duration;
 
 public class Fan extends StackPane{
-	private double startAngle = 15;
+	private double startAngle = 10;
      private Timeline fan;
 	private Pane blades = getBlades();
 	private ObservableList<Node> list = blades.getChildren();

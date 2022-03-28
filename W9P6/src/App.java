@@ -1,33 +1,54 @@
-import javafx.application.*;
-import javafx.event.*;
-import javafx.scene.*;
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
-import javafx.stage.*;
+import javafx.scene.control.Slider;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.geometry.Pos;
 
-public class App extends Application{
+public class App extends Application {
+	@Override // Override the start method in the Application class
+	public void start(Stage primaryStage) {
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent arg0) {
-                System.out.println("Hello World");
-            }
-        });
+		Button btPause = new Button("Pause");
+		Button btResume = new Button("Resume");
+		Button btReverse = new Button("Reverse");
 
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
+		HBox paneForButtons = new HBox(5);
+		paneForButtons.setAlignment(Pos.CENTER);
+		paneForButtons.getChildren().addAll(
+			btPause, btResume, btReverse);
 
-        Scene scene = new Scene(root, 300, 250);
+		FanPane fan = new FanPane();
 
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
-    
+		Slider slider = new Slider();
+		slider.setMax(10);
+        
+		fan.rateProperty().bind(slider.valueProperty());
+
+		BorderPane pane = new BorderPane();
+		pane.setTop(paneForButtons);
+		pane.setCenter(fan);
+		pane.setBottom(slider);
+
+		btPause.setOnAction(e -> {
+			fan.pause();
+		});
+
+		btResume.setOnAction(e -> {
+			fan.play();
+		});
+
+		btReverse.setOnAction(e -> {
+			fan.reverse();
+		});
+
+		Scene scene = new Scene(pane, 200, 200);
+		primaryStage.setTitle("Week 9 Program 6");
+		primaryStage.setScene(scene);
+		primaryStage.show();
+    }    
     public static void main(String[] args) {
         launch(args);
     }
