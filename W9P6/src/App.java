@@ -24,7 +24,7 @@ public class App extends Application {
 
 		Slider slider = new Slider();
 		slider.setMax(10);
-        
+
 		fan.rateProperty().bind(slider.valueProperty());
 
 		BorderPane pane = new BorderPane();
@@ -48,8 +48,8 @@ public class App extends Application {
 		primaryStage.setTitle("Week 9 Program 6");
 		primaryStage.setScene(scene);
 		primaryStage.show();
-    }    
-    public static void main(String[] args) {
-        launch(args);
-    }
+}    
+     public static void main(String[] args) {
+          launch(args);
+     }
 }
