@@ -1,4 +1,6 @@
 public class Course {
+
+    // equals 
     
     private String courseName; 
     private String[] students = new String[100];

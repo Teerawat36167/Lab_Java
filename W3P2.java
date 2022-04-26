@@ -1,6 +1,8 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
+//ArrayCopy parseInt merge sort
+
 public class W3P2 {
     public static void main(String[] args) {
         Scanner a = new Scanner(System.in);

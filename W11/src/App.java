@@ -108,22 +108,22 @@ public class App extends Application{
     }
 
     private void saveData() throws IOException{
-        try(DataOutputStream output = new DataOutputStream(new FileOutputStream("src\\loan.dat"));){
-            output.writeUTF(tfAnnualInterestRate.getText());
-            output.writeUTF(tfNumberOfYears.getText());
-            output.writeUTF(tfLoanAmount.getText());
-            output.writeUTF(tfMonthlyPayment.getText());
-            output.writeUTF(tfTotalPayment.getText());
+        try(DataOutputStream data = new DataOutputStream(new FileOutputStream("src\\loan.dat"));){
+            data.writeUTF(tfAnnualInterestRate.getText());
+            data.writeUTF(tfNumberOfYears.getText());
+            data.writeUTF(tfLoanAmount.getText());
+            data.writeUTF(tfMonthlyPayment.getText());
+            data.writeUTF(tfTotalPayment.getText());
         }
     }
 
     private void loadData() throws IOException{
-        try(DataInputStream input = new DataInputStream(new FileInputStream("src\\loan.dat"));){
-            tfAnnualInterestRate.setText(input.readUTF());
-            tfNumberOfYears.setText(input.readUTF());
-            tfLoanAmount.setText(input.readUTF());
-            tfMonthlyPayment.setText(input.readUTF());
-            tfTotalPayment.setText(input.readUTF());
+        try(DataInputStream data = new DataInputStream(new FileInputStream("src\\loan.dat"));){
+            tfAnnualInterestRate.setText(data.readUTF());
+            tfNumberOfYears.setText(data.readUTF());
+            tfLoanAmount.setText(data.readUTF());
+            tfMonthlyPayment.setText(data.readUTF());
+            tfTotalPayment.setText(data.readUTF());
         }
     }
 }

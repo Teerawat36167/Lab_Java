@@ -1,5 +1,7 @@
 import java.util.*;
 
+//Array list
+
 public class Lab7Account {
     private int id = 0;
     private double balance = 0;

@@ -1,4 +1,6 @@
 public class W6P2 {
+
+    //For each
     public static void main(String[] args) {
         Course S1 = new Course("Math");
         S1.addStudent("Tee");

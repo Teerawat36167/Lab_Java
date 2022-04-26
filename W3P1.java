@@ -1,5 +1,7 @@
 import java.lang.Math;
 
+//Math sqrt
+
 public class W3P1 {
 
     static int palindrome;
