@@ -6,12 +6,14 @@ import java.io.IOException;
 
 import javafx.application.Application;
 import javafx.geometry.HPos;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 public class App extends Application{
@@ -33,19 +35,25 @@ public class App extends Application{
         gridPane.setHgap(5);
         gridPane.setVgap(5);
         gridPane.add(new Label("Annual Interest Rate:"), 0, 0);
-        gridPane.add(tfAnnualInterestRate, 3, 0);
+        gridPane.add(tfAnnualInterestRate, 1, 0);
         gridPane.add(new Label("Number of Years:"), 0, 1);
-        gridPane.add(tfNumberOfYears, 3, 1);
+        gridPane.add(tfNumberOfYears, 1, 1);
         gridPane.add(new Label("Loan Amount:"), 0, 2);
-        gridPane.add(tfLoanAmount, 3, 2);
+        gridPane.add(tfLoanAmount, 1, 2);
         gridPane.add(new Label("Monthly Payment:"), 0, 3);
-        gridPane.add(tfMonthlyPayment, 3, 3);
+        gridPane.add(tfMonthlyPayment, 1, 3);
         gridPane.add(new Label("Total Payment:"), 0, 4);
-        gridPane.add(tfTotalPayment, 3, 4);
-        gridPane.add(btCalculate, 3, 5);
-        gridPane.add(btSave, 0, 5);
-        gridPane.add(btLoad, 1, 5);
-        gridPane.add(btClear, 2, 5);
+        gridPane.add(tfTotalPayment, 1, 4);
+
+        HBox button1 = new HBox(15);
+        button1.getChildren().addAll(btSave,btLoad);
+        HBox button2 = new HBox(15);
+        button2.setPadding(new Insets(0, 0, 0, 30));
+        button2.getChildren().add(btClear);
+        button2.getChildren().add(btCalculate);
+        
+        gridPane.add(button1, 0, 5);
+        gridPane.add(button2, 1, 5);
 
         gridPane.setAlignment(Pos.CENTER);
         tfAnnualInterestRate.setAlignment(Pos.BOTTOM_RIGHT);
@@ -55,10 +63,6 @@ public class App extends Application{
         tfTotalPayment.setAlignment(Pos.BOTTOM_RIGHT);
         tfMonthlyPayment.setEditable(false);
         tfTotalPayment.setEditable(false);
-        GridPane.setHalignment(btCalculate, HPos.RIGHT);
-        GridPane.setHalignment(btSave, HPos.RIGHT);  
-        GridPane.setHalignment(btLoad, HPos.LEFT);
-        GridPane.setHalignment(btClear, HPos.LEFT);
 
         btCalculate.setOnAction(e -> calculateLoanPayment());
         btClear.setOnAction(e -> clearTextField());
@@ -127,3 +131,4 @@ public class App extends Application{
         }
     }
 }
+

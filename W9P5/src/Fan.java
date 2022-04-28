@@ -10,6 +10,8 @@ import javafx.animation.Timeline;
 import javafx.animation.KeyFrame;
 import javafx.util.Duration;
 
+//stackPane เรียงทุกอย่างไว้ที่กลาง pane
+
 public class Fan extends StackPane{
 	private double startAngle = 10;
      private Timeline fan;
