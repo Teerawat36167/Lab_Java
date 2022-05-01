@@ -1,6 +1,6 @@
 *.class
-!/lib/*
-!/bin/*
+**/lib/*
+**/bin/*
 *.dll
 *.mp4
 *.json
