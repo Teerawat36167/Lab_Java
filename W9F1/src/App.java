@@ -2,10 +2,18 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ScrollBar;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBase;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.layout.BorderPane;
 import javafx.geometry.Pos;
 
@@ -16,18 +24,62 @@ public class App extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+
+        //button
+
         Button btn = new Button("Show Table");
         btn.setOnAction(e -> show());
+
+        //CheckBox
+
+        CheckBox test = new CheckBox("test");
+        test.setOnAction(e -> {
+            if (test.isSelected()) {
+                System.out.println("s");
+            } else {
+                System.out.println("b");
+            }
+        });
+
+        //radioButton
+
+        VBox radioButtom = new VBox(20);
+        RadioButton rbRed = new RadioButton("Red");
+        RadioButton rbBlue = new RadioButton("Blue");
+        RadioButton rbGreen = new RadioButton("Green");
+        radioButtom.getChildren().addAll(rbRed,rbBlue,rbGreen);
+
+        ToggleGroup group = new ToggleGroup();
+        rbRed.setToggleGroup(group);
+        rbBlue.setToggleGroup(group);
+        rbGreen.setToggleGroup(group);
+
+        //ComboBox
+
+        Integer[] num = {1,2,3,4,5};
+
+        ComboBox<Integer> cbo = new ComboBox<>();
+        cbo.getItems().addAll(num);
+        cbo.setValue(0);
+
         HBox hBox = new HBox(10);
         hBox.setAlignment(Pos.CENTER);
-        hBox.getChildren().addAll(new Label("Loan Amount"),loanAmount,new Label("Number of Years"),numOfyear,btn);
+        hBox.getChildren().addAll(new Label("Loan Amount"),loanAmount,new Label("Number of Years"),numOfyear,btn,test);
         loanAmount.setPrefColumnCount(7);
         numOfyear.setPrefColumnCount(2);
         output.setEditable(true);
-
+        
         BorderPane pane = new BorderPane();
         pane.setTop(hBox);
         pane.setCenter(output);
+        pane.setLeft(radioButtom);
+        pane.setRight(cbo);
+
+        //ScrollBar
+
+        ScrollBar sb = new ScrollBar();
+        pane.setBottom(sb);
+        sb.valueProperty().addListener(e -> System.out.println(sb.getValue()));
 
         Scene scene = new Scene(pane);
         primaryStage.setTitle("loan GUI");

@@ -53,7 +53,7 @@ public class Carpane extends Pane{
 
      public void move() {
 		if (x <= getWidth()) {
-			x += 1;	
+			x += 1;
 		} 
 		else
 			x = 0;
