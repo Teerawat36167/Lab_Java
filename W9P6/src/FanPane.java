@@ -1,5 +1,6 @@
 import javafx.collections.ObservableList;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Arc;
 import javafx.scene.shape.ArcType;
@@ -11,7 +12,7 @@ import javafx.util.Duration;
 import javafx.geometry.Insets;
 import javafx.beans.property.DoubleProperty;
 
-public  class FanPane extends Pane {
+public  class FanPane extends StackPane {
 	private Circle circle = new Circle();
 	private double startAngle = 15;
 	private Timeline fan;
@@ -19,7 +20,7 @@ public  class FanPane extends Pane {
 	private Arc arc;
 
 	public FanPane() {
-		setPadding(new Insets(10, 10, 10, 10));
+		// setPadding(new Insets(10, 10, 10, 10));
 		circle.setStroke(Color.BLACK);
 		circle.setFill(Color.WHITE);
 		circle.centerXProperty().bind(widthProperty().divide(2));

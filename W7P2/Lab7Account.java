@@ -1,6 +1,12 @@
 import java.util.*;
 
 //Array list
+//.add(value)
+//.get(index)
+//.set(index,value)
+//.remove(index)
+//.size()
+//.clear()
 
 public class Lab7Account {
     private int id = 0;
@@ -72,7 +78,7 @@ public class Lab7Account {
         System.out.println("Date                                 Type          Amount        balance");
         for (int i = 0; i < transactions.size(); i++) {
             Transactions tsList = transactions.get(i);
-            System.out.println(tsList.getDateCreated() + "         " + tsList.getType() + "             " + tsList.getAmount() + "          " + tsList.getBalance());
+            System.out.printf(tsList.getDateCreated() + "         %c             %-4.1f          %6.1f\n",tsList.getType(),tsList.getAmount(),tsList.getBalance());
         }
     }
 }

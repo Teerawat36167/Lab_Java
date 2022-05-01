@@ -14,7 +14,7 @@ public class App extends Application{
 
         pane.setOnKeyPressed(e -> {
 			if (e.getCode() == KeyCode.D) {
-				pane.increaseSpeed();
+				pane.increaseSpeed(); 
 			}
 			else if (e.getCode() == KeyCode.A) {
 				pane.decreaseSpeed();
@@ -33,3 +33,5 @@ public class App extends Application{
         launch(args);
     }
 }
+
+

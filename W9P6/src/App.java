@@ -44,7 +44,7 @@ public class App extends Application {
 			fan.reverse();
 		});
 
-		Scene scene = new Scene(pane, 200, 200);
+		Scene scene = new Scene(pane, 400, 400);
 		primaryStage.setTitle("Week 9 Program 6");
 		primaryStage.setScene(scene);
 		primaryStage.show();
